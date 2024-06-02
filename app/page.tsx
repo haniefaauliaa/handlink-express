@@ -33,7 +33,7 @@ export default function Page() {
                                 </span>
                             </p>
                         </div>
-                        <ButtonLink href="/">Get Started Today!</ButtonLink>
+                        <ButtonLink href="/upload">Get Started Today!</ButtonLink>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ export default function Page() {
             <div className="container mx-auto flex min-h-[calc(100vh-92px)] flex-col items-center gap-6 p-6 md:gap-12 md:py-24 lg:flex-row lg:gap-24">
                 <div className="relative h-fit w-full overflow-hidden md:flex-1">
                     <Image
-                        src={minitutor}
+                        src={minitutor} 
                         sizes="100vw"
                         style={{
                             width: "100%",
@@ -48,7 +48,7 @@ export default function Page() {
                         <div className="absolute bottom-0 left-0 right-0 top-0 flex-1 origin-bottom scale-x-95 scale-y-[.1] bg-blue-500 transition-all ease-out group-hover:scale-x-100 group-hover:scale-y-100 group-active:scale-95"></div>
                         <Link
                             className="text-md relative font-bold transition-all ease-out group-hover:px-4 group-hover:text-white md:text-lg"
-                            href={"#"}
+                            href={"/upload"}
                         >
                             Convert Now!
                         </Link>
