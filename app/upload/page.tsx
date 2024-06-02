@@ -1,12 +1,27 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 const Page = () => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [message, setMessage] = useState<string>('');
     const router = useRouter();
+
+
+    useEffect(() => {
+        const prepareServer = async () => {
+            try {
+              const response = await fetch('http://110.239.71.252:5003/prepare', { method: 'GET' });
+              if (!response.ok) {
+                throw new Error('Failed to prepare server');
+              }
+            } catch (error) {
+              setMessage('An error occurred while preparing the server: ' + (error instanceof Error ? error.message : 'Unknown error'));
+            }
+        };
+     prepareServer();
+     }, []);
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {
@@ -26,7 +41,7 @@ const Page = () => {
         formData.append('file', selectedFile);
 
         try {
-        const response = await fetch('http://127.0.0.1:5000/post_gambar', {
+        const response = await fetch('http://110.239.71.252:5003/post_gambar', {
                 method: 'POST',
                 body: formData,
             });
