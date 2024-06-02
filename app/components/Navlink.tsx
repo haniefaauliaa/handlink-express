@@ -12,7 +12,7 @@ interface NavlinkProps {
 }
 
 export default function Navlink({
-    className,
+    className, 
     href,
     onClick,
     children,

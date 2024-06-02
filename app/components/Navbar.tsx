@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
-    variable: "--font-montserrat",
+    variable: "--font-montserrat", 
 });
 
 export default function Navbar() {

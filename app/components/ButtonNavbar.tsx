@@ -15,7 +15,7 @@ export default function ButtonNavbar({
         <button
             type="button"
             className={`inline-block rounded-2xl bg-blue-800 px-4 py-2 text-white transition-all duration-300 ease-in-out hover:bg-blue-600 lg:text-lg xl:text-3xl ${className}`}
-            onClick={onClick}
+            onClick={onClick} 
         >
             {children}
         </button>
