@@ -26,8 +26,8 @@ const Page = () => {
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {
         setSelectedFile(event.target.files[0]);
-    }
-  };
+        }
+    };
 
   const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
